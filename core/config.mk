@@ -440,7 +440,7 @@ endif
 # See envsetup.mk for a description of SCAN_EXCLUDE_DIRS
 FIND_LEAVES_EXCLUDES := $(addprefix --prune=, $(SCAN_EXCLUDE_DIRS) .repo .git)
 
-include vendor/styx/config/BoardConfigStyx.mk
+include vendor/fuse/config/BoardConfigFuse.mk
 
 # The build system exposes several variables for where to find the kernel
 # headers:
@@ -1260,7 +1260,7 @@ endif
 DEFAULT_DATA_OUT_MODULES := ltp $(ltp_packages)
 .KATI_READONLY := DEFAULT_DATA_OUT_MODULES
 
-include vendor/styx/build/core/config.mk
+include vendor/fuse/build/core/config.mk
 
 include $(BUILD_SYSTEM)/dumpvar.mk
 
